@@ -15,9 +15,9 @@ import {
 
 const SERVICES = [
   {
-    title: 'Linux Administration Classes',
+    title: 'Linux Administration',
     desc:
-      'Learn Linux fundamentals, server management, shell scripting, and real-world system administration.',
+      'Linux fundamentals, server management, shell scripting & administration.',
     icon: FaLinux,
     gradient: 'from-orange-500 to-amber-500',
     link: '/linux-training',
@@ -25,7 +25,7 @@ const SERVICES = [
   {
     title: 'AWS Cloud Training',
     desc:
-      'Hands-on AWS training covering EC2, S3, IAM, VPC, Load Balancers, and real-time cloud projects.',
+      'Hands-on AWS services, EC2, S3, IAM, VPC & real-time projects.',
     icon: FaAws,
     gradient: 'from-yellow-500 to-orange-500',
     link: '/aws-training',
@@ -33,15 +33,15 @@ const SERVICES = [
   {
     title: 'Docker & Kubernetes',
     desc:
-      'Containerization, Docker images, Kubernetes clusters, deployments, services, and production use-cases.',
+      'Docker containers, Kubernetes clusters & deployments.',
     icon: FaDocker,
     gradient: 'from-cyan-500 to-blue-600',
     link: '/docker-kubernetes',
   },
   {
-    title: 'DevOps CI/CD Training',
+    title: 'DevOps CI/CD',
     desc:
-      'CI/CD pipelines using Git, GitHub, Jenkins, Maven, and automated deployments.',
+      'CI/CD pipelines using Git, GitHub & Jenkins.',
     icon: FaCogs,
     gradient: 'from-indigo-500 to-purple-600',
     link: '/cicd-training',
@@ -49,7 +49,7 @@ const SERVICES = [
   {
     title: 'Infrastructure as Code',
     desc:
-      'Terraform, configuration management, automation, and cloud infrastructure provisioning.',
+      'Terraform, automation & cloud infrastructure.',
     icon: FaCloud,
     gradient: 'from-emerald-500 to-teal-500',
     link: '/devops-course',
@@ -57,7 +57,7 @@ const SERVICES = [
   {
     title: 'Real-Time Projects',
     desc:
-      'Industry-level DevOps projects, live servers, and deployment scenarios.',
+      'Industry-level DevOps projects & live servers.',
     icon: FaProjectDiagram,
     gradient: 'from-fuchsia-500 to-rose-500',
     link: '/projects',
@@ -65,15 +65,15 @@ const SERVICES = [
   {
     title: 'Job-Oriented Training',
     desc:
-      'Practical training focused on interviews, resume preparation, and DevOps job roles.',
+      'Interview prep, resume & job-focused learning.',
     icon: FaUserGraduate,
     gradient: 'from-blue-500 to-indigo-600',
     link: '/placement-support',
   },
   {
-    title: 'Live Instructor-Led Classes',
+    title: 'Live Classes',
     desc:
-      'Live interactive sessions with experienced trainers and doubt-clearing support.',
+      'Instructor-led live sessions & doubt solving.',
     icon: FaChalkboardTeacher,
     gradient: 'from-red-500 to-pink-500',
     link: '/live-classes',
@@ -84,7 +84,7 @@ export default function ProductServices() {
   return (
     <section
       id="services"
-      className="relative bg-[#fafffd] py-20 sm:py-24 overflow-hidden"
+      className="relative bg-[#fafffd] py-16 sm:py-24"
     >
       {/* ===== TITLE ===== */}
       <div className="max-w-7xl mx-auto px-6 text-center mb-16 sm:mb-20">
@@ -99,73 +99,63 @@ export default function ProductServices() {
       </div>
 
       {/* ===== GRID ===== */}
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-10">
-          {SERVICES.map((service, index) => {
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:gap-6 lg:gap-8">
+          {SERVICES.map((service) => {
             const Icon = service.icon
 
             return (
               <Link
                 key={service.title}
                 href={service.link}
-                className="block focus:outline-none"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group"
               >
                 <div
                   className="
-                    group relative rounded-3xl bg-white p-8
-                    cursor-pointer border border-transparent
-                    shadow transition-all duration-500 ease-out
-                    hover:border-black hover:-translate-y-2 hover:shadow-xl
-                    active:scale-[0.98]
-                    focus-visible:ring-2 focus-visible:ring-indigo-500
-                    focus-visible:ring-offset-4
+                    h-full rounded-2xl bg-white
+                    border border-gray-100
+                    p-4 sm:p-6
+                    shadow-sm
+                    transition-all duration-300
+                    hover:-translate-y-1 hover:shadow-lg
                   "
                 >
                   {/* ICON */}
                   <div
                     className={`
-                      w-14 h-14 rounded-2xl
+                      mb-3 sm:mb-5
+                      w-10 h-10 sm:w-14 sm:h-14
+                      rounded-xl
                       bg-gradient-to-br ${service.gradient}
                       flex items-center justify-center
-                      text-white shadow-lg mb-6
-                      transition-transform duration-500
-                      group-hover:scale-110
+                      text-white
+                      shadow-md
                     `}
                   >
-                    <Icon size={24} />
+                    <Icon className="text-lg sm:text-2xl" />
                   </div>
 
-                  {/* TEXT */}
-                  <h3 className="text-xl font-semibold text-gray-950 mb-3">
+                  {/* TITLE */}
+                  <h3 className="text-sm sm:text-lg font-semibold text-gray-900">
                     {service.title}
                   </h3>
 
-                  <p className="text-gray-600 leading-relaxed">
+                  {/* DESCRIPTION */}
+                  <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-600 leading-snug sm:leading-relaxed line-clamp-3">
                     {service.desc}
                   </p>
 
                   {/* CTA */}
                   <span
                     className="
-                      mt-4 inline-flex items-center gap-1
-                      text-sm font-medium text-indigo-600
-                      transition-all duration-300
-                      group-hover:gap-2 group-hover:underline
+                      mt-2 sm:mt-4 inline-block
+                      text-xs sm:text-sm
+                      font-medium text-indigo-600
+                      group-hover:underline
                     "
                   >
-                    View Syllabus →
+                    View Details →
                   </span>
-
-                  {/* SOFT GLOW */}
-                  <div
-                    className="
-                      pointer-events-none absolute inset-0 rounded-3xl
-                      bg-gradient-to-br from-transparent via-transparent to-black/5
-                      opacity-0 group-hover:opacity-100
-                      transition duration-500
-                    "
-                  />
                 </div>
               </Link>
             )
