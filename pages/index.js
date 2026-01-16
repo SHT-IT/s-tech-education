@@ -48,7 +48,7 @@ export default function Home() {
         <link rel="canonical" href="https://www.stecheducation.com" />
 
         {/* FAVICON */}
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
 
         {/* OPEN GRAPH */}
         <meta
