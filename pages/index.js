@@ -11,8 +11,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
     name: "S Tech Education",
-    url: "https://www.stecheducation.com",
-    logo: "https://www.stecheducation.com/images/logo/logoo.png",
+    url: "https://www.stech-info.co.in",
+    logo: "https://www.stech-info.co.in/images/logo/logoo.png",
     description:
       "S Tech Education is a professional DevOps and Cloud training institute offering hands-on training in DevOps, AWS, Docker, Kubernetes, Linux and CI/CD with real-time projects and job assistance.",
     foundingDate: "2024-01-01",
@@ -45,7 +45,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* CANONICAL */}
-        <link rel="canonical" href="https://www.stecheducation.com" />
+        <link rel="canonical" href="https://www.stech-info.co.in" />
 
         {/* FAVICON */}
         <link rel="icon" href="/favicon.ico" />
@@ -63,7 +63,7 @@ export default function Home() {
           property="og:image"
           content="/images/logo/logoo.png"
         />
-        <meta property="og:url" content="https://www.stecheducation.com" />
+        <meta property="og:url" content="https://www.stech-info.co.in" />
         <meta property="og:type" content="website" />
 
         {/* TWITTER */}

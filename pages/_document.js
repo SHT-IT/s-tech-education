@@ -30,7 +30,7 @@ class MyDocument extends Document {
             content="Join S Tech Education to master DevOps, AWS Cloud, Docker, Kubernetes and automation with hands-on training and job assistance."
           />
           <meta property="og:image" content="/images/logo/logoo.png" />
-          <meta property="og:url" content="https://www.stecheducation.com" />
+          <meta property="og:url" content="https://www.stech-info.co.in" />
 
           {/* TWITTER CARD */}
           <meta name="twitter:card" content="summary_large_image" />
@@ -53,7 +53,7 @@ class MyDocument extends Document {
           />
 
           {/* CANONICAL */}
-          <link rel="canonical" href="https://www.stecheducation.com" />
+          <link rel="canonical" href="https://www.stech-info.co.in" />
         </Head>
 
         <body className="antialiased font-inter">
