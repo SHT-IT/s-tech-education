@@ -20,7 +20,7 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>Page Under Development | SHT IT Solution</title>
+        <title>Page Under Development | S TECH Education</title>
         <meta name="robots" content="noindex, nofollow" />
       </Head>
 
@@ -47,7 +47,7 @@ export default function Custom404() {
               </span>
             </Link>
 
-            <Link href="/contact-us" className="no-underline">
+            <Link href="/contact" className="no-underline">
               <span className="inline-block px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-gray-800 transition-all duration-300 cursor-pointer">
                 Contact Us
               </span>
