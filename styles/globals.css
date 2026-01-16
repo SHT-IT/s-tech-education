@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbit linear infinite;
+}
+
+
+/* =====================================
+   GLOBAL LINK RESET (NO UNDERLINE)
+   ===================================== */
+@layer base {
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+
+/* Optional: smoother font rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rs-shop-header {
+  background-image: linear-gradient(
+    to right,
+    #337ae5 0%,
+    #408fe5 34%,
+    #d4734a 71%,
+    #ea6b2e 100%
+  );
+  background-clip: text;
+  
+  color: transparent;
+}
+
+
+
+/* ================= HERO BOTTOM ONLY GLOW ================= */
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.3;
+    transform: translateX(-50%) scaleX(0.9);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translateX(-50%) scaleX(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(-50%) scaleX(0.9);
+  }
+}
+
+.hero-bottom-glow-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  overflow: hidden; /* IMPORTANT: stops glow from going up */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-bottom-glow {
+  position: absolute;
+  bottom: -120px; /* pushes glow DOWN */
+  left: 50%;
+  width: 120%;
+  height: 200px;
+  background-image: linear-gradient(
+    to right,
+    #337ae5 0%,
+    #408fe5 34%,
+    #408fe5 71%,
+    #408fe5 100%
+  );
+  filter: blur(70px);
+  animation: pulse-glow 3.5s ease-in-out infinite;
+}
+
+
+
+/* =====================================
+   GLOBAL LINK RESET (NO UNDERLINE)
+   ===================================== */
+@layer base {
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+
+/* Optional: smoother font rendering */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rs-shop-header {
+  background-image: linear-gradient(
+    to right,
+    #337ae5 0%,
+    #408fe5 34%,
+    #d4734a 71%,
+    #ea6b2e 100%
+  );
+  background-clip: text;
+  
+  color: transparent;
+}
+
+
+
+/* ================= HERO BOTTOM ONLY GLOW ================= */
+
+@keyframes pulse-glow {
+  0% {
+    opacity: 0.3;
+    transform: translateX(-50%) scaleX(0.9);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translateX(-50%) scaleX(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(-50%) scaleX(0.9);
+  }
+}
+
+.hero-bottom-glow-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  overflow: hidden; /* IMPORTANT: stops glow from going up */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-bottom-glow {
+  position: absolute;
+  bottom: -120px; /* pushes glow DOWN */
+  left: 50%;
+  width: 120%;
+  height: 200px;
+  background-image: linear-gradient(
+    to right,
+    #337ae5 0%,
+    #408fe5 34%,
+    #408fe5 71%,
+    #408fe5 100%
+  );
+  filter: blur(70px);
+  animation: pulse-glow 3.5s ease-in-out infinite;
+}
+
+
+@keyframes toast {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-toast {
+  animation: toast 0.35s ease-out;
+}
+
+

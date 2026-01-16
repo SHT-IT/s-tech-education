@@ -1,0 +1,10 @@
+@media (max-width: 767px) {
+  .hero-scale {
+    transform: scale(0.38);
+    transform-origin: left center;
+    top: -160px;
+    gap: 20px;
+  }
+}
+
+

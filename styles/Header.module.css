@@ -1,0 +1,143 @@
+#navbarNav1 {
+  margin: 10px 6px;
+  font-family: sans-serif;
+}
+
+#bar {
+  width: 50%;
+  max-width: 500px;
+  padding: auto;
+
+}
+
+#sidebar {
+  position: absolute;
+  height: 1000px;
+  left: -200px;
+  transition: 0.4s;
+  top: 10;
+  z-index: 2;
+
+}
+
+
+
+#sidebar .toggle-btn {
+  position: absolute;
+  font-size: 40px;
+  top: 6px;
+  left: 200px;
+  z-index: 2;
+  display: none;
+  margin-left: 2px;
+}
+
+.toggle-btn span {
+  width: 45px;
+  height: 5px;
+  display: block;
+  margin-top: 4px;
+}
+
+
+
+.greyonhover:hover {
+  color: #ABA7A7
+}
+
+.form-control:focus {
+  border-color: inherit;
+  /* border: 2px solid green; */
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control:focus,
+.form-control:active {
+  background: transparent;
+}
+
+
+
+
+
+
+
+#pwc .nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  /* Adjust link color */
+}
+
+
+
+#navbarNav1 div {
+  text-align: center;
+}
+
+#navbarNav1 .nav-item {
+  width: 12em;
+}
+
+.cat-img {
+  border: 2px solid #2e8b57;
+  width: 40%;
+  border-radius: 50%;
+  margin: auto auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 1px;
+}
+
+
+@media screen and (max-width:768px) {
+
+  #sidebar .toggle-btn {
+    display: block;
+
+  }
+
+  #navbarNav1 {
+    margin: 4px 0;
+  }
+
+  #navbarNav1 .nav-link {
+    margin: 4% auto;
+    font-size: 10px;
+    height: auto;
+    padding: 0;
+
+  }
+
+  #navbarNav1 div {
+    font-size: 9px;
+
+  }
+
+  .cat-img {
+    height: 7.4em;
+    width: 7.4em;
+  }
+
+}
+
+@media screen and (max-width:320px) {
+  .cat-img {
+    height: 4.4em;
+    width: 4.4em;
+  }
+}
+/* Optional: Hide scrollbar for Webkit */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Add in your global styles (e.g. globals.css) */
+
