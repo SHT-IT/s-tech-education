@@ -185,9 +185,8 @@ export default function Header() {
               <button className="flex items-center gap-1 font-medium">
                 {item.label}
                 <HiChevronDown
-                  className={`transition ${
-                    openMenu === key ? 'rotate-180' : ''
-                  }`}
+                  className={`transition ${openMenu === key ? 'rotate-180' : ''
+                    }`}
                 />
               </button>
 
@@ -201,11 +200,10 @@ export default function Header() {
                         <button
                           key={tab.title}
                           onMouseEnter={() => setActiveIndex(idx)}
-                          className={`w-full text-left px-4 py-3 rounded-lg font-medium transition ${
-                            activeIndex === idx
+                          className={`w-full text-left px-4 py-3 rounded-lg font-medium transition ${activeIndex === idx
                               ? 'bg-white text-blue-700 shadow'
                               : 'text-gray-700 hover:bg-white'
-                          }`}
+                            }`}
                         >
                           {tab.title}
                         </button>
@@ -235,12 +233,16 @@ export default function Header() {
           ))}
         </div>
 
-        <Link
-          href="/contact"
-          className="hidden lg:block rounded-full border px-6 py-2  transition text-black font-bold"
-        >
-          Contact Us
-        </Link>
+       <div className="hidden lg:block">
+  <Link
+    href="/contact"
+    className="inline-flex rounded-full border px-6 py-2 font-bold text-black transition"
+  >
+    Contact Us
+  </Link>
+</div>
+
+
 
         {/* MOBILE BUTTON */}
         <button
@@ -273,9 +275,8 @@ export default function Header() {
                 >
                   {item.label}
                   <HiChevronDown
-                    className={`transition ${
-                      mobileDropdown === key ? 'rotate-180' : ''
-                    }`}
+                    className={`transition ${mobileDropdown === key ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
 
